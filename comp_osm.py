@@ -357,7 +357,7 @@ def count_features(osm_root):
             roads["parking"] += 1
         if tags.get("amenity") == "fuel":
             roads["fuel"] += 1
-        if "landuse" in tags or "natrual" in tags:
+        if "landuse" in tags or "natural" in tags:
             landuse_types.add(tags["landuse"])
         for h in ("leisure", "tourism", "waterway"):
             if h in tags:
@@ -388,7 +388,7 @@ def count_features(osm_root):
         if tags.get("amenity") == "parking":
             roads["parking"] += 1
         if "man_made" in tags:
-            buildings.add(way.get("id"))
+            buildings.add(node.get("id"))
         for h in ("leisure", "tourism", "waterway"):
             if h in tags:
                 landuse_types.add(h)
