@@ -372,7 +372,7 @@ def count_features(osm_root):
         if tags.get("amenity") in ("hospital", "clinic"):
             amenities["health"] += 1
         if tags.get("amenity") == "school" or tags.get("education") == "school":
-            amenities["police"] += 1
+            amenities["school"] += 1
         if tags.get("amenity") == "police":
             amenities["police"] += 1
         if tags.get("amenity") == "post_office":
